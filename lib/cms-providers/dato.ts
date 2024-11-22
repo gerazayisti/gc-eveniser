@@ -79,7 +79,7 @@ export async function getAllStages(): Promise<Stage[]> {
          slug
          stream
          discord
-         isLive
+         islive
          roomId
          schedule {
            title

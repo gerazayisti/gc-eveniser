@@ -60,6 +60,36 @@
             }
           }
         }
+      },
+      "islive": {
+        "type": "Boolean",
+        "config": {
+          "label": "isLive",
+          "placeholder_false": "false",
+          "placeholder_true": "true",
+          "default_value": true
+        }
+      },
+      "roomid": {
+        "type": "Text",
+        "config": {
+          "label": " roomId",
+          "placeholder": "rooom id 100ms"
+        }
+      },
+      "backstagepeers": {
+        "type": "Text",
+        "config": {
+          "label": "backstagePeers",
+          "placeholder": ""
+        }
+      },
+      "stagepeers": {
+        "type": "Text",
+        "config": {
+          "label": "stagePeers",
+          "placeholder": ""
+        }
       }
     }
   }

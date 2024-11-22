@@ -16,7 +16,7 @@
 import { Job, Sponsor, Stage, Speaker } from '@lib/types';
 import { richTextAsText, getLinkUrl } from './utils';
 
-const API_REF_URL = `https://${process.env.PRISMIC_REPO_ID}.prismic.io/api/v2`;
+const API_REF_URL = `https://gc-evenizer.prismic.io/api/v2`;
 const API_URL = `https://${process.env.PRISMIC_REPO_ID}.prismic.io/graphql`;
 const API_TOKEN = process.env.PRISMIC_ACCESS_TOKEN || '';
 
@@ -174,26 +174,32 @@ export async function getAllStages(): Promise<Stage[]> {
       stream: getLinkUrl(edge.node.stream),
       discord: getLinkUrl(edge.node.discord),
       schedule: edge.node.schedule
-        .filter((item: any) => item.talk)
+        .filter((item: any) => item.talk) // Filtrer les éléments avec 'talk'
         .map((item: any) => {
-          if (item.talk)
+          if (item.talk) {
             return {
               title: richTextAsText(item.talk.title),
-              start: item.talk.start,
-              end: item.talk.end,
-              speaker: item.talk.speakers.map((item: any) => ({
-                name: richTextAsText(item.speaker.name),
-                slug: item.speaker._meta.uid,
-                image: {
-                  url:
-                    item.speaker.image?.url.replace('compress,format', 'format') ||
-                    'https://images.prismic.io'
-                }
-              }))
+              start: item.talk.start ?? null,  // Remplacer undefined par null si start est manquant
+              end: item.talk.end ?? null,      // Remplacer undefined par null si end est manquant
+              // Vérification si 'speakers' est un tableau avant de faire un map
+              speaker: Array.isArray(item.talk.speakers)
+                ? item.talk.speakers.map((speaker: any) => ({
+                  name: richTextAsText(speaker.speaker.name),
+                  slug: speaker.speaker._meta.uid,
+                  image: {
+                    url:
+                      speaker.speaker.image?.url?.replace('compress,format', 'format') ||
+                      'https://images.prismic.io', // URL par défaut si image est manquante
+                  },
+                }))
+                : [], // Si 'speakers' n'est pas un tableau, renvoie un tableau vide
             };
+          }
         })
     };
   });
+
+
 
   return reformatedData;
 }

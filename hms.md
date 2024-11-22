@@ -66,7 +66,7 @@ To avoid switching into carousel mode you set the `activeSpeakerThreshold` value
 There are four different stages included in the seed data. Feel free to add or remove these based on your requirement. Each stage can be easily configured to be a Live Video/Audio experience or embed YouTube stream.
 
 
-- `isLive`(default setting):  This makes your stage Live. If you just want to stream a Youtube URL turn this off and add YT url in the `Stream` field.
+- `islive`(default setting):  This makes your stage Live. If you just want to stream a Youtube URL turn this off and add YT url in the `Stream` field.
 - `roomId`: Contains 100ms's `roomId` associated with the specific stage. This is pre-populated, so we advice you not to change the parameters for this field unless you know what you're doing. 
 
 ![CMS](/media/cms.png)

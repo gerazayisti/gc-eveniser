@@ -36,7 +36,7 @@ export default function StagePage({ stage, allStages }: Props) {
   };
   return (
     <Page meta={meta} fullViewport>
-      <Layout isLive={stage.isLive}>
+      <Layout islive={stage.islive || false}>
         <StageContainer stage={stage} allStages={allStages} />
       </Layout>
     </Page>
@@ -67,7 +67,6 @@ export const getStaticPaths: GetStaticPaths = async () => {
   const stages = await getAllStages();
   const slugs = stages?.map((s: Stage) => ({ params: { slug: s.slug } })) || [];
 
-  console.log({ slugs });
   return {
     paths: slugs,
     fallback: false

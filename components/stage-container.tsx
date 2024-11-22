@@ -44,13 +44,13 @@ export default function StageContainer({ stage, allStages }: Props) {
     <div className={styles.container}>
       <div className={`${styles.streamContainer} ${isConnected ? '' : styles.streamYt}`}>
         {loginStatus === 'loggedIn' ? (
-          !stage.isLive ? (
+          !stage.islive ? (
             <div className={cn(styles.stream, styleUtils.appear, styleUtils['appear-first'])}>
               <iframe
                 allow="autoplay; picture-in-picture"
                 allowFullScreen
                 frameBorder="0"
-                src={`${updatedStage.stream}?autoplay=1&mute=1`}
+                src={`${updatedStage.stream}?autoplay=0&mute=0`}
                 title={updatedStage.name}
                 width="100%"
               />
@@ -94,7 +94,7 @@ export default function StageContainer({ stage, allStages }: Props) {
           <ConfEntry onRegister={() => mutate()} />
         )}
       </div>
-      {stage.isLive ? (
+      {stage.islive ? (
         isConnected ? (
           <Sidebar allStages={allStages} />
         ) : null

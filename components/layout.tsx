@@ -34,7 +34,7 @@ type Props = {
   className?: string;
   hideNav?: boolean;
   layoutStyles?: any;
-  isLive?: boolean;
+  islive?: boolean;
 };
 
 export default function Layout({
@@ -42,7 +42,7 @@ export default function Layout({
   className,
   hideNav,
   layoutStyles,
-  isLive = false
+  islive = false
 }: Props) {
   const router = useRouter();
   const activeRoute = router.asPath;
@@ -74,20 +74,20 @@ export default function Layout({
               ))}
             </div>
 
-            {(hmsConfig.hmsIntegration && isLive && !disableCta.includes(activeRoute)) ||
+            {(hmsConfig.hmsIntegration && islive && !disableCta.includes(activeRoute)) ||
             activeRoute === '/' ? (
               <div className={cn(styles['header-right'])}>
-                {activeRoute === '/' ? <DemoButton /> : <RoomCta />}
+                {activeRoute === '/' ? <RoomCta/> : <DemoButton/>}
               </div>
             ) : (
               <div />
             )}
           </header>
         )}
-        <ViewSource />
+
         <div className={styles.page}>
           <main className={styles.main} style={layoutStyles}>
-            <SkipNavContent />
+           <SkipNavContent />
             <div className={cn(styles.full, className)}>{children}</div>
           </main>
           {!activeRoute.startsWith('/stage') && <Footer />}

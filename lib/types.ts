@@ -38,7 +38,7 @@ export type Stage = {
   stream: string;
   discord: string;
   schedule: Talk[];
-  isLive: boolean;
+  islive: boolean;
   roomId: string;
   stagePeers: string[];
   backstagePeers: string[];

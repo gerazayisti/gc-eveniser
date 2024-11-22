@@ -437,6 +437,51 @@ interface StageDocumentData {
    * - **Documentation**: https://prismic.io/docs/field#group
    */
   schedule: prismic.GroupField<Simplify<StageDocumentDataScheduleItem>>;
+
+  /**
+   * isLive field in *stage*
+   *
+   * - **Field Type**: Boolean
+   * - **Placeholder**: *None*
+   * - **Default Value**: true
+   * - **API ID Path**: stage.islive
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#boolean
+   */
+  islive: prismic.BooleanField;
+
+  /**
+   *  roomId field in *stage*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: rooom id 100ms
+   * - **API ID Path**: stage.roomid
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  roomid: prismic.KeyTextField;
+
+  /**
+   * backstagePeers field in *stage*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: stage.backstagepeers
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  backstagepeers: prismic.KeyTextField;
+
+  /**
+   * stagePeers field in *stage*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: stage.stagepeers
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  stagepeers: prismic.KeyTextField;
 }
 
 /**
