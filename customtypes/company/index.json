@@ -1,0 +1,142 @@
+{
+  "format": "custom",
+  "id": "company",
+  "label": "company",
+  "repeatable": true,
+  "status": true,
+  "json": {
+    "Main": {
+      "uid": {
+        "type": "UID",
+        "config": {
+          "label": "Slug",
+          "placeholder": "URL slug"
+        }
+      },
+      "name": {
+        "type": "StructuredText",
+        "config": {
+          "label": "Name",
+          "placeholder": "Company name",
+          "allowTargetBlank": true,
+          "multi": "heading1"
+        }
+      },
+      "logo": {
+        "type": "Image",
+        "config": {
+          "label": "Logo",
+          "constraint": {
+            "width": 128,
+            "height": 134
+          },
+          "thumbnails": []
+        }
+      },
+      "website": {
+        "type": "Link",
+        "config": {
+          "label": "Website",
+          "placeholder": "Compagny website",
+          "allowTargetBlank": true,
+          "select": null,
+          "allowText": true
+        }
+      },
+      "card_image": {
+        "type": "Image",
+        "config": {
+          "label": "Card Image",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
+      "description": {
+        "type": "StructuredText",
+        "config": {
+          "label": "Description",
+          "placeholder": "Description",
+          "allowTargetBlank": true,
+          "multi": "paragraph"
+        }
+      },
+      "call_to_action": {
+        "type": "StructuredText",
+        "config": {
+          "label": "Call To Action",
+          "placeholder": "CTA labe",
+          "allowTargetBlank": true,
+          "multi": "paragraph"
+        }
+      },
+      "call_to_action_link": {
+        "type": "Link",
+        "config": {
+          "label": "Call To Action Link",
+          "placeholder": "CTA link",
+          "allowTargetBlank": true,
+          "select": null,
+          "allowText": true
+        }
+      },
+      "discord": {
+        "type": "Link",
+        "config": {
+          "label": "Discord",
+          "placeholder": "Discord Link",
+          "allowTargetBlank": true,
+          "select": null,
+          "allowText": true
+        }
+      },
+      "tier": {
+        "type": "Select",
+        "config": {
+          "label": "Tier",
+          "placeholder": "Tier",
+          "options": ["gold", "diamond"]
+        }
+      },
+      "tier_rank": {
+        "type": "Number",
+        "config": {
+          "label": "Tier Rank",
+          "placeholder": "Tier Rank"
+        }
+      },
+      "links": {
+        "type": "Group",
+        "config": {
+          "label": "Links",
+          "repeat": true,
+          "fields": {
+            "link_text": {
+              "type": "Text",
+              "config": {
+                "label": "Link Text",
+                "placeholder": "Link Text label"
+              }
+            },
+            "link": {
+              "type": "Link",
+              "config": {
+                "label": "Link",
+                "placeholder": "Link",
+                "allowTargetBlank": true,
+                "select": null,
+                "allowText": true
+              }
+            }
+          }
+        }
+      },
+      "youtube_slug": {
+        "type": "Text",
+        "config": {
+          "label": "Youtube Slug",
+          "placeholder": "Youtube Slug"
+        }
+      }
+    }
+  }
+}

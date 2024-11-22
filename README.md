@@ -62,7 +62,7 @@ First, to set local environment variables you can either use Vercel CLI [vercel 
 
 ```bash
 
-cp .env.local.example .env.local
+cp .env.local .env.local
 ```
 
 Then install the package and run the development server:

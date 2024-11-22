@@ -1,0 +1,66 @@
+{
+  "format": "custom",
+  "id": "talk",
+  "label": "talk",
+  "repeatable": true,
+  "status": true,
+  "json": {
+    "Main": {
+      "uid": {
+        "type": "UID",
+        "config": {
+          "label": "UID"
+        }
+      },
+      "title": {
+        "type": "StructuredText",
+        "config": {
+          "label": "Title",
+          "placeholder": "Talk title",
+          "allowTargetBlank": true,
+          "multi": "heading1"
+        }
+      },
+      "speakers": {
+        "type": "Group",
+        "config": {
+          "label": "Speakers",
+          "repeat": true,
+          "fields": {
+            "speaker": {
+              "type": "Link",
+              "config": {
+                "label": "Speaker",
+                "select": "document",
+                "customtypes": ["speaker"]
+              }
+            }
+          }
+        }
+      },
+      "start": {
+        "type": "Timestamp",
+        "config": {
+          "label": "Start",
+          "placeholder": ""
+        }
+      },
+      "end": {
+        "type": "Timestamp",
+        "config": {
+          "label": "End",
+          "placeholder": ""
+        }
+      },
+      "description": {
+        "type": "StructuredText",
+        "config": {
+          "label": "Description",
+          "placeholder": "Talk description",
+          "allowTargetBlank": true,
+          "multi": "paragraph"
+        }
+      }
+    }
+  }
+}

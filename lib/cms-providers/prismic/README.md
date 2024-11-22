@@ -28,10 +28,10 @@ First, set local environment variables in `.env.local.example`.
 cp .env.local.example .env.local
 ```
 
-Then update the environment variables with your Prismic repo ID. Your repo id will the be subdomain of your Prismic repository. For example if your repo url is https://your-repo-name.prismic.io, then you would update your `.env.local` file as follows:
+Then update the environment variables with your Prismic repo ID. Your repo id will the be subdomain of your Prismic repository. For example if your repo url is https://gc-evenizer.prismic.io, then you would update your `.env.local` file as follows:
 
 ```
-PRISMIC_REPO_ID=your-repo-name
+PRISMIC_REPO_ID=gc-evenizer
 ```
 
 Next at the top of the file, make sure to remove the the value from `DATOCMS_READ_ONLY_API_TOKEN`. The project won't source the content from Prismic until this has been done.
