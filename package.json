@@ -2,7 +2,7 @@
   "private": true,
   "repository": "vercel/virtual-event-starter-kit",
   "author": "Vercel Inc.",
-  "homepage": "https://demo.vercel.events",
+  "homepage": "https://gc-eveniser-niou.vercel.app",
   "license": "Apache-2.0",
   "engines": {
     "node": ">=14"
