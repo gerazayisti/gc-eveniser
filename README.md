@@ -1,8 +1,8 @@
 [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fvercel%2Fvirtual-event-starter-kit&project-name=virtual-event-starter-kit&repository-name=virtual-event-starter-kit&demo-title=Virtual%20Event%20Starter%20Kit&demo-description=Jumpstart%20your%20virtual%20event%20and%20scale%20to%20any%20size%20with%20Next.js%20and%20Vercel.&demo-url=https%3A%2F%2Fgc-eveniser-niou.vercel.app%2F&demo-image=https%3A%2F%2Fgc-eveniser-niou.vercel.app%2Fdeploy.png&integration-ids=oac_7yeSwUoVR5no3SlA9WM6oR7l)
 
-# Virtual Events Starter Kit
+# gc-eveniser Starter Kit
 
-This virtual event starter kit was used to run [Next.js Conf 2020](https://nextjs.org/2020/conf), which had almost 40,000 live attendees. It includes the following features:
+This virtual event starter kit was used to run our virtual event. It includes the following features:
 
 - Multiple stages - with the ability to add multiple sessions on each stage
 - Each stage can be configured as -
