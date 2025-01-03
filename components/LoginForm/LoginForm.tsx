@@ -47,7 +47,7 @@ export const LoginForm: React.FC = () => {
           <h1 className={styles.title}>GC-Evenizer</h1>
           <div className={styles.welcomeText}>
             <h2>Welcome back!</h2>
-            <p>STS library is proud to see you back. Please enter your details.</p>
+            <p>GC-Evenizer is proud to see you back. Please enter your details.</p>
           </div>
 
           <SocialLoginButtons />
@@ -60,6 +60,7 @@ export const LoginForm: React.FC = () => {
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               error={errors.email}
+              placeholder='example@example.com'
             />
 
             <InputField
@@ -68,6 +69,7 @@ export const LoginForm: React.FC = () => {
               value={password}
               onChange={(e) => setPassword(e.target.value)}
               error={errors.password}
+              placeholder='**********'
             />
 
             <div className={styles.formOptions}>

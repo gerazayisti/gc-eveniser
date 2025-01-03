@@ -5,7 +5,7 @@
 }
 
 .logoSection {
-  background: radial-gradient(circle at center, #beb4c5 , #8465cb , black, #000000 );
+  background: radial-gradient(circle at center, #beb4c5 10%, #8465cb, black, #000000);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -27,7 +27,7 @@
 }
 
 .formSection {
-  background-color: var(--gray1);
+  background-color: black;
   padding: 4rem;
   display: flex;
   align-items: center;
@@ -40,12 +40,13 @@
 }
 
 .title {
-  font-size: 2.5rem;
+  font-size: 3rem;
   font-weight: bold;
-  color: var(--brand);
+  color: white;
   text-align: center;
   margin-bottom: 1rem;
-  animation: glow 2s ease-in-out infinite alternate;
+  text-shadow: 2px 4px 4px var(--brand);
+  /* animation: glow 2s ease-in-out infinite alternate; */
 }
 
 @keyframes glow {
@@ -100,7 +101,7 @@
 }
 
 .forgotPassword {
-  color: var(--brand-light);
+  color: #1877f2;
   text-decoration: none;
   transition: all 0.2s;
 }
@@ -132,7 +133,7 @@
 }
 
 .signupLink {
-  color: var(--brand-light);
+  color: #1877f2;
   text-decoration: none;
   transition: all 0.2s;
 }

@@ -8,10 +8,10 @@
 .line {
   flex: 1;
   height: 1px;
-  background-color: var(--secondary-color);
+  background-color: white;
 }
 
 .text {
-  color: var(--secondary-color);
+  color: white;
   font-size: 0.875rem;
 }
