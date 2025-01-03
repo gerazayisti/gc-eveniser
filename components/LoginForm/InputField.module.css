@@ -1,0 +1,33 @@
+.inputWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.label {
+  color: white;
+  font-size: 0.875rem;
+}
+
+.input {
+  background-color: var(--gray);
+  color: white;
+  padding: 0.75rem;
+  border: 1px solid transparent;
+  border-radius: 0.5rem;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.input:focus {
+  border-color: var(--brand);
+}
+
+.errorInput {
+  border-color: var(--error);
+}
+
+.errorText {
+  color: var(--error);
+  font-size: 0.875rem;
+}

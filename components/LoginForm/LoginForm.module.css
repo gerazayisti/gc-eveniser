@@ -1,0 +1,156 @@
+.container {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.logoSection {
+  background: radial-gradient(circle at center, #beb4c5 , #8465cb , black, #000000 );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.logo {
+  animation: rotate 20s linear infinite;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.formSection {
+  background-color: var(--gray1);
+  padding: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.formWrapper {
+  width: 100%;
+  max-width: 400px;
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: var(--brand);
+  text-align: center;
+  margin-bottom: 1rem;
+  animation: glow 2s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+  from {
+    text-shadow:
+      0 0 5px var(--brand-lighter),
+      0 0 10px var(--brand-lighter);
+  }
+  to {
+    text-shadow:
+      0 0 10px var(--brand),
+      0 0 20px var(--brand);
+  }
+}
+
+.welcomeText {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.welcomeText h2 {
+  color: white;
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.welcomeText p {
+  color: var(--brand-lighter);
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.formOptions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.rememberMe {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: white;
+}
+
+.rememberMe input[type='checkbox'] {
+  accent-color: var(--brand);
+}
+
+.forgotPassword {
+  color: var(--brand-light);
+  text-decoration: none;
+  transition: all 0.2s;
+}
+
+.forgotPassword:hover {
+  text-decoration: underline;
+}
+
+.loginButton {
+  background-color: var(--brand);
+  color: white;
+  padding: 0.75rem;
+  border: none;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.loginButton:hover {
+  background-color: var(--brand-dark);
+  box-shadow: 0 0 10px var(--brand-light);
+  transform: translateY(-1px);
+}
+
+.signupText {
+  text-align: center;
+  color: white;
+}
+
+.signupLink {
+  color: var(--brand-light);
+  text-decoration: none;
+  transition: all 0.2s;
+}
+
+.signupLink:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .container {
+    grid-template-columns: 1fr;
+  }
+
+  .logoSection {
+    display: none;
+  }
+
+  .formSection {
+    padding: 2rem;
+  }
+}

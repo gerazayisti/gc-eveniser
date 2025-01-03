@@ -1,0 +1,30 @@
+.socialButtons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.socialButton {
+  background-color: var(--brand-dark);
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0.75rem;
+  cursor: pointer;
+  transition: all 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.socialButton:hover {
+  background-color: var(--brand);
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(134, 101, 203, 0.3);
+}
+
+.socialButton img {
+  width: 20px;
+  height: 20px;
+  filter: brightness(0) invert(1);
+}
