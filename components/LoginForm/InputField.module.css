@@ -19,7 +19,30 @@
   outline: none;
   transition: border-color 0.2s;
 }
+.parentPass{
+  position: relative;
+  width: 100%;
+}
+.parentPass img{
+  position: absolute;
+  top: .9rem;
+  left: 90%;
+}
+.inputPass {
+  background-color: var(--gray);
+  width: 100%;
+  color: white;
+  font-weight: bold;
+  padding: 0.75rem;
+  border: 1px solid transparent;
+  border-radius: 0.5rem;
+  outline: none;
+  transition: border-color 0.2s; 
+}
 
+.inputPass:focus{
+  border-color: var(--brand);
+}
 .input:focus {
   border-color: var(--brand);
 }

@@ -14,15 +14,24 @@
 }
 
 .logo {
-  animation: rotate 20s linear infinite;
+  animation: enhancedRotate 10s ease-in-out linear infinite;
 }
 
-@keyframes rotate {
-  from {
-    transform: rotate(0deg);
+@keyframes enhancedRotate {
+  0% {
+    transform: rotate(0deg) scale(0.8) translateY(0);
   }
-  to {
-    transform: rotate(360deg);
+  25% {
+    transform: rotate(90deg) scale(0.85) translateY(-5px);
+  }
+  50% {
+    transform: rotate(180deg) scale(0.9) translateY(0);
+  }
+  75% {
+    transform: rotate(270deg) scale(0.95) translateY(5px);
+  }
+  100% {
+    transform: rotate(360deg) scale(1) translateY(0);
   }
 }
 
@@ -46,7 +55,7 @@
   text-align: center;
   margin-bottom: 1rem;
   text-shadow: 2px 4px 4px var(--brand);
-  /* animation: glow 2s ease-in-out infinite alternate; */
+  animation: glow 2s ease-in-out infinite alternate;
 }
 
 @keyframes glow {
@@ -57,7 +66,7 @@
   }
   to {
     text-shadow:
-      0 0 10px var(--brand),
+      0 0 10px var(--brand-dark),
       0 0 20px var(--brand);
   }
 }

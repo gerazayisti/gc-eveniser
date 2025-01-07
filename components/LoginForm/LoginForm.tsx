@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { SocialLoginButtons } from './SocialLoginButtons';
 import { Divider } from './Divider';
 import { InputField } from './InputField';
+import InputFieldPass from './InputField.Password';
 import styles from './LoginForm.module.css';
 // import Logo from '../../public/g-connect-logo-removebg-preview.png'
 export const LoginForm: React.FC = () => {
@@ -63,7 +64,7 @@ export const LoginForm: React.FC = () => {
               placeholder='example@example.com'
             />
 
-            <InputField
+            <InputFieldPass
               label="Password"
               type="password"
               value={password}
